@@ -42,7 +42,7 @@ function messageFormatterWithDefaults(pathOrMessage) {
     sanitizedPathExists = true;
   }
 
-  args[0] = sanitizedPathExists ? sanitizedPath : pathOrMessage;
+  args[0] = pathExists ? pathOrMessage : sanitizedPath;
   return messageFormatterSuper.apply(this, args);
 }
 
